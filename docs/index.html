@@ -2,19 +2,24 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Scene Generator</title>
+  <link rel="icon" href="data:,"> <!-- Estää favicon 404 -->
+
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 2em;
+      max-width: 600px;
+      margin: auto;
     }
     h1 {
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }
     .result {
-      font-size: 1.5em;
-      margin: 1em 0;
+      font-size: 1.3em;
+      margin: 1.5em 0;
     }
     button {
       padding: 0.6em 1.2em;
@@ -34,21 +39,30 @@
     let data = [];
 
     async function loadCSV() {
-      const response = await fetch('random_scene_data.csv');
-      const text = await response.text();
-      const rows = text.trim().split('\n');
-      const headers = rows[0].split(',');
-      const columns = headers.map(() => []);
+      try {
+        const response = await fetch('random_scene_data.csv');
+        const text = await response.text();
+        const rows = text.trim().split('\n');
+        const headers = rows[0].split(',').map(h => h.trim());
+        const columns = headers.map(() => []);
 
-      for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].split(',');
-        cells.forEach((cell, index) => {
-          columns[index].push(cell);
-        });
+        for (let i = 1; i < rows.length; i++) {
+          const cells = rows[i].split(',').map(c => c.trim());
+          if (cells.length !== columns.length) {
+            console.warn("Ohitetaan virheellinen rivi:", cells);
+            continue;
+          }
+          cells.forEach((cell, index) => {
+            columns[index].push(cell);
+          });
+        }
+
+        data = columns;
+        generateScene();
+      } catch (error) {
+        console.error("CSV lataus epäonnistui:", error);
+        document.getElementById('result').textContent = "Virhe CSV-tiedoston latauksessa.";
       }
-
-      data = columns;
-      generateScene();
     }
 
     function generateScene() {
