@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <title>Random Scene Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satunnainen Kohtaus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      margin-bottom: 0.5em;
+    }
+    .result {
+      font-size: 1.2em;
+      margin: 1em 0;
+    }
+    button {
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h2>Sivusto toimii!</h2>
- </body>
+
+  <h1>Satunnainen Kohtaus</h1>
+
+  <div class="result" id="result">Ladataan...</div>
+  <button onclick="generateScene()">Arvo Uusi</button>
+
+  <noscript>
+    <p>JavaScript vaaditaan tämän sivun käyttämiseen.</p>
+  </noscript>
+
+  <script>
+    let data = [];
+
+    async function loadCSV() {
+      try {
+        const response = await fetch('random_scene_data.csv');
+        if (!response.ok) throw new Error('CSV-tiedoston haku epäonnistui');
+        const text = await response.text();
+        const rows = text.trim().split(/\r?\n/);
+        const headers = rows[0].split(',');
+        const columns = headers.map(() => []);
+
+        for (let i = 1; i < rows.length; i++) {
+          const cells = rows[i].split(',');
+          cells.forEach((cell, index) => {
+            columns[index].push(cell.trim());
+          });
+        }
+
+        data = columns;
+        generateScene();
+      } catch (error) {
+        document.getElementById('result').textContent = "Virhe ladattaessa dataa. Tarkista CSV-tiedosto.";
+        console.error(error);
+      }
+    }
+
+    function generateScene() {
+      if (data.length === 0) return;
+
+      const resultDiv = document.getElementById('result');
+      const scene = data.map(col => {
+        const randIndex = Math.floor(Math.random() * col.length);
+        return col[randIndex];
+      });
+
+      resultDiv.innerHTML = `
+        <strong>Tunne:</strong> ${scene[0]}<br>
+        <strong>Suhde:</strong> ${scene[1]}<br>
+        <strong>Jännite:</strong> ${scene[2]}<br>
+        <strong>Suomielokuva:</strong> ${scene[3]}<br>
+        <strong>Suomi TV-sarja:</strong> ${scene[4]}
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCSV();
+    });
+  </script>
+
+</body>
 </html>
