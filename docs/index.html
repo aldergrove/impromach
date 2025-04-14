@@ -1,35 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 <head>
   <meta charset="UTF-8">
   <title>Random Scene Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      margin-bottom: 0.5em;
+    }
+    .result {
+      font-size: 1.5em;
+      margin: 1em 0;
+    }
+    button {
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h2>🎲 Random Scene Words</h2>
-  <input type="file" id="csvInput" accept=".csv"><br><br>
-  <button onclick="pickRandom()">Pick Random Line</button>
-  <p id="result">No result yet.</p>
+
+  <h1>Satunnainen Kohtaus</h1>
+
+  <div class="result" id="result">Ladataan...</div>
+  <button onclick="generateScene()">Arvo Uusi</button>
 
   <script>
-    let lines = [];
+    let data = [];
 
-    document.getElementById("csvInput").addEventListener("change", function(e) {
-      const file = e.target.files[0];
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        lines = event.target.result.split("\n").filter(line => line.trim() !== "");
-      };
-      reader.readAsText(file);
-    });
+    async function loadCSV() {
+      const response = await fetch('random_scene_data.csv');
+      const text = await response.text();
+      const rows = text.trim().split('\n');
+      const headers = rows[0].split(',');
+      const columns = headers.map(() => []);
 
-    function pickRandom() {
-      if (lines.length === 0) {
-        document.getElementById("result").innerText = "Please load a CSV first.";
-        return;
+      for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].split(',');
+        cells.forEach((cell, index) => {
+          columns[index].push(cell);
+        });
       }
-      const randomLine = lines[Math.floor(Math.random() * lines.length)];
-      document.getElementById("result").innerText = randomLine;
+
+      data = columns;
+      generateScene();
     }
+
+    function generateScene() {
+      if (data.length === 0) return;
+
+      const resultDiv = document.getElementById('result');
+      const scene = data.map(col => {
+        const randIndex = Math.floor(Math.random() * col.length);
+        return col[randIndex];
+      });
+
+      resultDiv.innerHTML = `
+        <strong>Tunne:</strong> ${scene[0]}<br>
+        <strong>Suhde:</strong> ${scene[1]}<br>
+        <strong>Jännite:</strong> ${scene[2]}<br>
+        <strong>Suomielokuva:</strong> ${scene[3]}<br>
+        <strong>Suomi TV-sarja:</strong> ${scene[4]}
+      `;
+    }
+
+    loadCSV();
   </script>
+
 </body>
 </html>
