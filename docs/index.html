@@ -48,13 +48,17 @@
 
         for (let i = 1; i < rows.length; i++) {
           const cells = rows[i].split(',').map(c => c.trim());
-          if (cells.length !== columns.length) {
-            console.warn("Ohitetaan virheellinen rivi:", cells);
+          if (cells.length !== headers.length) {
+            console.warn(`Ohitetaan rivi ${i + 1}: väärä määrä sarakkeita (${cells.length}/${headers.length}) →`, cells);
             continue;
           }
           cells.forEach((cell, index) => {
             columns[index].push(cell);
           });
+        }
+
+        if (columns.some(col => col.length === 0)) {
+          throw new Error("Yksi tai useampi sarake jäi tyhjäksi. Tarkista CSV.");
         }
 
         data = columns;
