@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Random Scene Generator</title>
+</head>
+<body>
+  <h2>🎲 Random Scene Words</h2>
+  <input type="file" id="csvInput" accept=".csv"><br><br>
+  <button onclick="pickRandom()">Pick Random Line</button>
+  <p id="result">No result yet.</p>
+
+  <script>
+    let lines = [];
+
+    document.getElementById("csvInput").addEventListener("change", function(e) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        lines = event.target.result.split("\n").filter(line => line.trim() !== "");
+      };
+      reader.readAsText(file);
+    });
+
+    function pickRandom() {
+      if (lines.length === 0) {
+        document.getElementById("result").innerText = "Please load a CSV first.";
+        return;
+      }
+      const randomLine = lines[Math.floor(Math.random() * lines.length)];
+      document.getElementById("result").innerText = randomLine;
+    }
+  </script>
+</body>
+</html>
