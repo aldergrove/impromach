@@ -1,101 +1,51 @@
 Tunne,Suhde,Jännite,Suomielokuvat,Suomi TV-sarjat
-ilo,naapurit,kostonhimo,Joulutarina,Roba
-surullisuus,äiti–lapsi,salaisuus,Joulutarina,Kaikki synnit
-pelko,rakkaus,identiteetin paljastus,Joulutarina,Putous
-toivo,vihamiehet,kaksinaamaisuus,Kätilö,Putous
-toivo,äiti–lapsi,rahaongelma,Kätilö,Sorjonen
-toivo,vihamiehet,pakkoavioliitto,Pahat pojat,Vain elämää
-ilo,rakkaus,kostonhimo,Leijonasydän,Metsolat
-häpeä,kilpailijat,pettäminen,Leijonasydän,Salatut elämät
-ilo,kilpailijat,menneisyyden virhe,Leijonasydän,Kummeli
-ilo,kollegat,kaksinaamaisuus,Pahat pojat,Salatut elämät
-innostus,kollegat,kostonhimo,Tuntematon sotilas,Karjalan kunnailla
-ilo,kollegat,kaksinaamaisuus,Mielensäpahoittaja,Sydänten akatemia
-pelko,kilpailijat,kostonhimo,Napapiirin sankarit,Vain elämää
-innostus,kilpailijat,kriisi,Pahat pojat,Kaikki synnit
-ylpeys,kilpailijat,identiteetin paljastus,Härmä,Sorjonen
-tylsyys,opettaja–oppilas,pettäminen,Saattokeikka,Vain elämää
-tylsyys,kilpailijat,salaisuus,Napapiirin sankarit,Roba
-innostus,kollegat,salaisuus,Joulutarina,Kummeli
-surullisuus,äiti–lapsi,väärinkäsitys,Tummien perhosten koti,Karjalan kunnailla
-innostus,rakkaus,kaksinaamaisuus,Kätilö,Kaikki synnit
-kateus,ystävät,pakkoavioliitto,Napapiirin sankarit,Karjalan kunnailla
-tylsyys,vihamiehet,pettäminen,Tuntematon sotilas,Karjalan kunnailla
-toivo,kollegat,rahaongelma,Napapiirin sankarit,Vain elämää
-ylpeys,vihamiehet,pakkoavioliitto,Tummien perhosten koti,Roba
-ylpeys,äiti–lapsi,rahaongelma,Tuntematon sotilas,Putous
-toivo,naapurit,menneisyyden virhe,Napapiirin sankarit,Vain elämää
-ylpeys,ystävät,rahaongelma,Pahat pojat,Putous
-häpeä,kollegat,kriisi,Joulutarina,Metsolat
-häpeä,naapurit,salaisuus,Kätilö,Vain elämää
-toivo,naapurit,pakkoavioliitto,Saattokeikka,Vain elämää
-surullisuus,naapurit,kriisi,Leijonasydän,Vain elämää
-toivo,vihamiehet,menneisyyden virhe,Napapiirin sankarit,Metsolat
-kateus,naapurit,salaisuus,Saattokeikka,Sorjonen
-viha,poliisi–rikollinen,pettäminen,Mielensäpahoittaja,Sorjonen
-innostus,rakkaus,salaisuus,Tuntematon sotilas,Sydänten akatemia
-surullisuus,äiti–lapsi,väärinkäsitys,Pahat pojat,Kaikki synnit
-pelko,poliisi–rikollinen,rahaongelma,Pahat pojat,Metsolat
-tylsyys,naapurit,kostonhimo,Pahat pojat,Kaikki synnit
-pelko,rakkaus,pettäminen,Napapiirin sankarit,Sorjonen
-tylsyys,sisarukset,väärinkäsitys,Härmä,Sydänten akatemia
-kateus,äiti–lapsi,pettäminen,Härmä,Vain elämää
-surullisuus,äiti–lapsi,kostonhimo,Härmä,Sorjonen
-pelko,naapurit,pakkoavioliitto,Tummien perhosten koti,Kaikki synnit
-viha,rakkaus,väärinkäsitys,Pahat pojat,Kummeli
-surullisuus,rakkaus,salaisuus,Kätilö,Kaikki synnit
-ylpeys,naapurit,rahaongelma,Mielensäpahoittaja,Metsolat
-viha,rakkaus,menneisyyden virhe,Tummien perhosten koti,Sorjonen
-pelko,vihamiehet,väärinkäsitys,Tummien perhosten koti,Sorjonen
-häpeä,kollegat,kaksinaamaisuus,Pahat pojat,Roba
-viha,kilpailijat,kostonhimo,Napapiirin sankarit,Putous
-toivo,poliisi–rikollinen,rahaongelma,Kätilö,Kummeli
-viha,naapurit,pakkoavioliitto,Saattokeikka,Metsolat
-häpeä,äiti–lapsi,pakkoavioliitto,Napapiirin sankarit,Metsolat
-toivo,kilpailijat,kriisi,Leijonasydän,Kaikki synnit
-ilo,äiti–lapsi,identiteetin paljastus,Kätilö,Sydänten akatemia
-toivo,kollegat,salaisuus,Tummien perhosten koti,Salatut elämät
-innostus,vihamiehet,kostonhimo,Mielensäpahoittaja,Sorjonen
-viha,ystävät,pakkoavioliitto,Saattokeikka,Kummeli
-viha,vihamiehet,pettäminen,Tuntematon sotilas,Sorjonen
-toivo,kilpailijat,kostonhimo,Kätilö,Metsolat
-innostus,kollegat,kriisi,Napapiirin sankarit,Vain elämää
-häpeä,opettaja–oppilas,identiteetin paljastus,Mielensäpahoittaja,Kaikki synnit
-ilo,kilpailijat,väärinkäsitys,Mielensäpahoittaja,Karjalan kunnailla
-viha,opettaja–oppilas,pettäminen,Joulutarina,Vain elämää
-ilo,poliisi–rikollinen,kostonhimo,Kätilö,Salatut elämät
-surullisuus,sisarukset,kostonhimo,Tuntematon sotilas,Metsolat
-ylpeys,opettaja–oppilas,menneisyyden virhe,Joulutarina,Putous
-surullisuus,kilpailijat,kriisi,Napapiirin sankarit,Kaikki synnit
-ilo,naapurit,kostonhimo,Leijonasydän,Metsolat
-surullisuus,äiti–lapsi,väärinkäsitys,Saattokeikka,Karjalan kunnailla
-viha,opettaja–oppilas,kriisi,Joulutarina,Sorjonen
-viha,vihamiehet,väärinkäsitys,Tummien perhosten koti,Vain elämää
-kateus,kollegat,kriisi,Saattokeikka,Sorjonen
-häpeä,kilpailijat,salaisuus,Pahat pojat,Vain elämää
-pelko,opettaja–oppilas,pettäminen,Härmä,Metsolat
-surullisuus,naapurit,väärinkäsitys,Pahat pojat,Sorjonen
-ylpeys,ystävät,kaksinaamaisuus,Leijonasydän,Putous
-viha,kollegat,identiteetin paljastus,Tuntematon sotilas,Sydänten akatemia
-viha,sisarukset,identiteetin paljastus,Saattokeikka,Karjalan kunnailla
-kateus,kollegat,pettäminen,Härmä,Karjalan kunnailla
-viha,rakkaus,kriisi,Napapiirin sankarit,Metsolat
-viha,äiti–lapsi,rahaongelma,Leijonasydän,Sydänten akatemia
-häpeä,sisarukset,väärinkäsitys,Pahat pojat,Metsolat
-tylsyys,rakkaus,salaisuus,Pahat pojat,Kummeli
-häpeä,kollegat,pettäminen,Pahat pojat,Sorjonen
-surullisuus,äiti–lapsi,väärinkäsitys,Tummien perhosten koti,Vain elämää
-kateus,rakkaus,salaisuus,Saattokeikka,Salatut elämät
-viha,naapurit,pakkoavioliitto,Härmä,Vain elämää
-tylsyys,rakkaus,rahaongelma,Napapiirin sankarit,Vain elämää
-innostus,vihamiehet,kriisi,Tummien perhosten koti,Vain elämää
-viha,vihamiehet,rahaongelma,Kätilö,Vain elämää
-tylsyys,kilpailijat,väärinkäsitys,Saattokeikka,Sydänten akatemia
-ylpeys,ystävät,kostonhimo,Pahat pojat,Sorjonen
-surullisuus,kollegat,kostonhimo,Saattokeikka,Salatut elämät
-innostus,äiti–lapsi,salaisuus,Tummien perhosten koti,Putous
-viha,kollegat,väärinkäsitys,Kätilö,Kaikki synnit
-toivo,naapurit,pettäminen,Pahat pojat,Putous
-häpeä,ystävät,kriisi,Napapiirin sankarit,Roba
-häpeä,kollegat,salaisuus,Mielensäpahoittaja,Metsolat
-innostus,kollegat,väärinkäsitys,Härmä,Roba
+ilo,ystävä,piilotettu salaisuus,Tuntematon sotilas,Salatut elämät
+surullisuus,vihollinen,kateus,Rukajärven tie,Sykkeet
+pelko,äiti,salaileminen,Talvisota,Metsolat
+viha,isä,pettäminen,Pahat pojat,Kotikatu
+innostus,veli,kunnianhimo,Helmiä ja sikoja,Putous
+tyytyväisyys,sisko,kosto,Kuutamolla,Kummeli
+kateus,opettaja,riita,Joulutarina,Pasila
+rauha,oppilas,väärinkäsitys,Napapiirin sankarit,Uusi päivä
+inho,pomo,salamarakkaus,Tyttö sinä olet tähti,Sorjonen
+yllättyneisyys,työntekijä,katkeruus,Käsky,Karppi
+turhautuminen,naapuri,syrjintä,Sauna,Bordertown
+kiitollisuus,puoliso,häpeä,Härmä,Roba
+häpeä,entinen kumppani,mustasukkaisuus,Lapin kullan kimallus,Kaikki synnit
+rakkaus,serkku,uusi alku,Vares – Yksityisetsivä,Keisari Aarnio
+yksinäisyys,isoäiti,välirikko,8-pallo,Tankki täyteen
+epävarmuus,isoisä,kilpailu,Tummien perhosten koti,Napapiirin sankarit (sarja)
+jännitys,lääkäri,ero,Sibelius,Team Ahma
+rauhoittuneisuus,asiakas,rakkauden tunnustus,Levottomat,Kymppitonni
+toivo,kauppias,vältely,Luokkakokous,Hyvät ja huonot uutiset
+epätoivo,kilpailija,epäily,Rölli ja metsänhenki,Itse valtiaat
+hämmennys,rakas,vaitiolo,Miehen työ,Jopet Show
+arvostus,salattu rakkaus,salaovi,Frozen Land,Isänmaan toivot
+syyllisyys,parisuhde,kielletty rakkaus,Ikitie,Pirkka-Pekka Petelius Show
+rohkeus,työpari,muistojen kaivelu,Hiljaisuus,Hovimäki
+uteliaisuus,alainen,epärehellisyys,Mieletön elokuu,Kultainen Venla
+innostuneisuus,pomon pomo,valhe,Koirankynnen leikkaaja,Toisen kanssa
+ylpeys,mentor,uhka,Leijonasydän,Kimmo
+helpotus,kilpakumppani,salaidentiteetti,Suden vuosi,Roba
+levottomuus,ryhmänohjaaja,kiristys,Varasto,Koukussa
+ärtymys,tuntematon,valehenkilöllisyys,Puhdistus,Vain elämää
+motivoituneisuus,nettituttavuus,kirje menneisyydestä,Yösyöttö,Aikuiset
+lempeys,ystävyys,perinnönjako,Rendel,Siskonpeti
+varmuus,aviomies,poliisikuulustelu,Heavy Trip,Kotikatsomo
+nöyryys,vaimo,äkillinen poismeno,Syke-elokuva,Dokumenttiprojekti
+ikävystyminen,psykologi,salakuuntelu,Kaksi kotia,YLE Uutiset
+mielihyvä,terapeutti,uhkaava viesti,Punainen viiva,Viiden jälkeen
+raivo,junassa vieras,pakomatka,Aleksis Kiven elämä,Elossa 24h
+lempeys,muukalainen,paljastus,Linnan juhlat,Remonttipiiskuri
+kateellisuus,lapsi,kaappaus,Poika ja ilves,Arman ja viimeinen ristiretki
+itkuisuus,ex-ystävä,vallankaappaus,Vares – Huhtikuun tytöt,Sohvaperunat
+hermostuneisuus,ex-puoliso,myrkytys,Luokkakokous 2,Temptation Island Suomi
+rauhoittuminen,kämppis,syytös,"Iloisia aikoja, Mielensäpahoittaja",Bachelor Suomi
+innostuminen,bändikaveri,noituus,Ihmisen osa,MasterChef Suomi
+välittäminen,kollega,valheellinen todistus,Maria's Paradise,Hell's Kitchen Suomi
+inho,alivuokralainen,haamu menneisyydestä,Sokea mies joka ei halunnut nähdä Titanicia,Strömsö
+lempeys,kilpailijan pomo,pakkoavioliitto,Sisu,Ensitreffit alttarilla
+innostus,vastanäyttelijä,salaa pidetty lapsi,Myrskyluodon Maija,Naurun tasapaino
+tyyntyminen,sisarpuoli,murhasalaisuus,Jadesoturi,Korkeasaari
+yritteliäisyys,velipuoli,vaihdettu henkilöllisyys,Teit meistä kauniin,Uutisvuoto
+opportunisti,kouluvihollinen,myrskyävä suhde,Tuntemattomat sotilaat,Maajussille morsian
