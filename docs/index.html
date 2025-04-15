@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Scene + Soundboard + Timer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .tabs button {
+      padding: 10px 20px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .tab-content {
+      display: none;
+      margin-top: 20px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .output {
+      border: 1px solid #ccc;
+      padding: 20px;
+      white-space: pre-wrap;
+    }
+    #timerDisplay {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    .flash {
+      background-color: red;
+      color: white;
+      animation: flash 1s infinite;
+    }
+    @keyframes flash {
+      0%   { background-color: red; }
+      50%  { background-color: white; color: red; }
+      100% { background-color: red; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Impro Tool</h1>
+
+<div class="tabs">
+  <button onclick="showTab('tab1')">🎲 Random Words</button>
+  <button onclick="showTab('tab2')">🔊 Soundboard</button>
+  <button onclick="showTab('tab3')">⏱️ Timer</button>
+</div>
+
+<!-- TAB 1: Random CSV Words -->
+<div id="tab1" class="tab-content active">
+  <h2>🎲 Random Scene Generator</h2>
+  <input type="file" id="csvFileInput" accept=".csv"><br>
+  <button onclick="generateRandomScene()">Generate Scene</button>
+  <div class="output" id="sceneOutput">Load a CSV and click "Generate Scene"!</div>
+</div>
+
+<!-- TAB 2: Soundboard -->
+<div id="tab2" class="tab-content">
+  <h2>🔊 Soundboard</h2>
+  <button onclick="playSound('sound1')">Play Sound 1</button>
+  <button onclick="playSound('sound2')">Play Sound 2</button>
+</div>
+
+<!-- TAB 3: Timer -->
+<div id="tab3" class="tab-content">
+  <h2>⏱️ Presentation Timer</h2>
+  <label>Minutes:
+    <input type="number" id="timerMinutes" value="5" min="1" max="60">
+  </label>
+  <br><br>
+  <button onclick="startTimer()">Start Timer</button>
+  <div id="timerDisplay">00:00</div>
+</div>
+
+<script>
+  // Tab switching
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  // CSV Reader + Random Scene
+  let dataRows = [];
+  document.getElementById('csvFileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const text = e.target.result;
+      const lines = text.split('\n').filter(line => line.trim() !== '');
+      const headers = lines[0].split(',').map(h => h.trim());
+      dataRows = lines.slice(1).map(line => {
+        const values = line.split(',').map(v => v.trim());
+        return Object.fromEntries(headers.map((h, i) => [h, values[i]]));
+      });
+      alert(`Loaded ${dataRows.length} scenes.`);
+    };
+    reader.readAsText(file);
+  });
+
+  function generateRandomScene() {
+    if (dataRows.length === 0) {
+      alert('Please load a CSV file first.');
+      return;
+    }
+    const scene = dataRows[Math.floor(Math.random() * dataRows.length)];
+    const output = Object.entries(scene).map(([k, v]) => `${k}: ${v}`).join('\n');
+    document.getElementById('sceneOutput').textContent = output;
+  }
+
+  // Soundboard
+  const sounds = {
+    sound1: new Audio('sound1.mp3'),
+    sound2: new Audio('sound2.mp3'),
+  };
+  function playSound(key) {
+    const sound = new Audio(sounds[key].src); // fresh instance
+    sound.play();
+  }
+
+  // Timer
+  let timerInterval = null;
+  function startTimer() {
+    clearInterval(timerInterval);
+    document.getElementById('tab3').classList.remove('flash');
+
+    let minutes = parseInt(document.getElementById('timerMinutes').value);
+    let seconds = minutes * 60;
+
+    timerInterval = setInterval(() => {
+      let m = Math.floor(seconds / 60);
+      let s = seconds % 60;
+      document.getElementById('timerDisplay').textContent =
+        `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+
+      if (seconds <= 60) {
+        document.getElementById('tab3').classList.add('flash');
+      }
+
+      if (seconds <= 0) {
+        clearInterval(timerInterval);
+      }
+
+      seconds--;
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>
