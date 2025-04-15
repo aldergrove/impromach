@@ -89,6 +89,29 @@
 
     loadCSV();
   </script>
-
+  
+  <script>
+  const soundFiles = {
+    "Correct": "correct_sound.wav",
+    "Wrong": "wrong_sound.wav",
+  };
+  
+  function createSoundButtons() {
+    const container = document.createElement('div');
+    Object.entries(soundFiles).forEach(([label, file]) => {
+      const button = document.createElement('button');
+      button.textContent = `🔊 ${label}`;
+      button.onclick = () => {
+        const audio = new Audio(file);
+        audio.play();
+      };
+      container.appendChild(button);
+    });
+    document.body.appendChild(container);
+  }
+  
+  window.onload = createSoundButtons;
+  </script>
+  
 </body>
 </html>
