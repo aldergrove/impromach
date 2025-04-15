@@ -64,8 +64,8 @@
 <!-- TAB 2: Soundboard -->
 <div id="tab2" class="tab-content">
   <h2>🔊 Soundboard</h2>
-  <button onclick="playSound('correctSound')">Play Sound 1</button>
-  <button onclick="playSound('wrongSound')">Play Sound 2</button>
+  <button onclick="playSound('sound1')">Play Sound 1</button>
+  <button onclick="playSound('sound2')">Play Sound 2</button>
 </div>
 
 <!-- TAB 3: Timer -->
@@ -119,8 +119,8 @@
 
   // Soundboard
   const sounds = {
-    correctSound: new Audio('correct_sound.wav'),
-    wrongSound: new Audio('wrong_sound.wav'),
+    sound1: new Audio('wrong_sound.wav'),
+    sound2: new Audio('correct_sound.wav'),
   };
   function playSound(key) {
     const sound = new Audio(sounds[key].src); // fresh instance
