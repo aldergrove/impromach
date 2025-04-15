@@ -119,8 +119,8 @@
 
   // Soundboard
   const sounds = {
-    sound1: new Audio('sound1.mp3'),
-    sound2: new Audio('sound2.mp3'),
+    correctSound: new Audio('correct_sound.wav'),
+    wrongSound: new Audio('wrong_sound.wav'),
   };
   function playSound(key) {
     const sound = new Audio(sounds[key].src); // fresh instance
